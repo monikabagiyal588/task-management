@@ -8,7 +8,9 @@ const PORT = process.env.PORT || 5000;
 
 connectDB();
 app.use(cors({
-  origin:"https://task-management-umber-two.vercel.app/"
+  origin:"https://task-management-umber-two.vercel.app/",
+   methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }));
 app.use(express.json());
 
